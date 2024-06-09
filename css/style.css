@@ -1,0 +1,145 @@
+.color_grade {
+    color: #664217;
+    color: #a79377;
+    color: #f7f4ed;
+    color: #D7AD68;
+    color: #F6D089;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f7f4ed;
+    color: #664217;
+    width: 100%;
+    height: 100vh;
+ 
+    
+}
+header {
+    background-color: #664217;
+    padding: 5px;
+    text-align: center;
+    color: #f7f4ed;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+header img{
+    display: block;
+}
+header input{
+    align-content: center;
+    width: 800px;
+    height: 60px;
+    border-radius: 20px;
+    border-color: #F6D089;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+header a {
+    color: #a79377;
+    border: none;
+    border-radius: 10px;
+    color: #f7f4ed ; 
+    font-size: 37px;
+    margin: 10px;
+}
+header i:hover {
+    color: #D7AD68;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: row row-reverse;
+}
+
+.busca{
+    display: flex;
+    align-content: center;
+    padding: 15px;
+    align-items: center;
+}
+.busca input{
+    margin: 0 20px;
+}
+.busca img{
+    height: 60px;
+}
+#papel{
+    margin-left: 20px;
+    border-radius: 20px 0px 0px 20px;
+}
+#name{
+    margin-right: 20px;
+    border-radius: 0px 20px 20px 0px;
+
+}
+
+
+/* produtos------------ */
+.content {
+    padding: 20px;
+   
+
+}
+.itens{
+    
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.itens > * {
+    flex-basis: 19%;
+}
+.produto {
+    
+    border: 1px solid #ccc; /* Borda cinza claro */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; 
+    width: 300px; 
+    text-align: center; 
+    background-color: #f9f9f9; 
+}
+
+.produto img {
+    max-width: 100%; /* Imagem se ajusta ao container */
+    height: auto; 
+    margin-bottom: 10px; 
+    aspect-ratio: 1/1;
+}
+
+.produto h3 {
+    color: #333; 
+    margin: 10px 0;
+}
+
+.produto p {
+    color: #666;
+    line-height: 1.5; 
+}
+
+.produto button {
+    width: 220px;
+    background-color: #D7AD68; 
+    color: #f7f4ed;
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; 
+    margin-top: 10px; /* Espaçamento acima do botão */
+    border-radius: 5px;
+}
+
+.produto button:hover {
+    background-color: #c69649; /* Cor de fundo do botão ao passar o mouse */
+}

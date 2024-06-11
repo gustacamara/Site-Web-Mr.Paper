@@ -20,7 +20,6 @@ body {
 }
 header {
     background-color: #664217;
-    padding: 5px;
     text-align: center;
     color: #f7f4ed;
     display: inline-flex;
@@ -84,13 +83,12 @@ header i:hover {
 
 
 /* produtos------------ */
-.content {
+.container {
     padding: 20px;
-   
+   margin-left: 20px;
 
 }
 .itens{
-    
     display: flex;
     justify-content: flex-start;
     gap: 20px;
@@ -99,8 +97,12 @@ header i:hover {
     flex-wrap: wrap;
 }
 
+/**
+ * Este código CSS seleciona todos os filhos diretos dos elementos com a classe "itens"
+ * e define a propriedade flex-basis deles como 18%.
+ */
 .itens > * {
-    flex-basis: 19%;
+    flex-basis: 18%;
 }
 .produto {
     
@@ -142,4 +144,10 @@ header i:hover {
 
 .produto button:hover {
     background-color: #c69649; /* Cor de fundo do botão ao passar o mouse */
+}
+footer{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

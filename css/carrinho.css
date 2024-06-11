@@ -1,0 +1,137 @@
+body{
+    background-color: #f7f4ed;
+    color: #664217;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+
+}
+.container{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.conteudo{
+    border: 1px solid #ccc; /* Borda cinza claro */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; 
+    width: 300px; 
+    text-align: center; 
+    background-color: #f9f9f9;
+    
+}
+.carrinho{
+    width: 60%;
+    
+}
+
+.itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f7f4ed;
+    border-radius: 10px ;
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between; 
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap : 10px;
+    flex-direction: row;
+    
+}
+.info img{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: top
+}
+.info .foto{
+    height: 123px;
+    overflow: hidden;
+}
+.descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.descricao h3{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    max-width: 452px;
+    margin: 0px;
+    
+}
+.valor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.valor input{
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.valor button{
+    cursor: pointer;
+    height: 42px;
+}
+
+.valor input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+.valor input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+.valor input:focus{
+    outline: none;
+    color: #664217;
+}
+
+/* Frete */
+.frete a{
+    margin: 10px;
+}
+.frete input{
+
+    font-family: Arial, sans-serif; 
+    margin-top: 10px;
+}
+
+/* Total */
+.compra{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.compra button{
+    cursor: pointer;
+    height: 42px;
+    background-color: #D7AD68;
+    color: #f7f4ed;
+    border: none;
+    border-radius: 10px;
+   
+}

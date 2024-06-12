@@ -1,0 +1,39 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    margin-top: 7%;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button{
+    padding: 10px;
+}
+.botoes{
+    margin-top: 10px;
+}
+.botoes button {
+    margin-top: 5px;
+    width: 32.5%;
+    display: flexbox;
+    padding: 10px;
+}
+.apagar_usuario{
+    width: 100%;
+    margin-top: 5px;
+
+}
+.apagar_usuario button:hover{
+    background-color: #d24923;
+    color: white;
+}
+

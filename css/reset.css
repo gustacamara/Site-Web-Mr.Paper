@@ -88,11 +88,12 @@ header i:hover {
 
 }
 input{
-    border-radius: 20px;
-    border-color: #F6D089;
-    font-family: Arial, sans-serif;
-
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
 }
+
 a {
     color: #D7AD68;
     border: none;

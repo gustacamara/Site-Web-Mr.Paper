@@ -1,87 +1,4 @@
-.color_grade {
-    color: #664217;
-    color: #a79377;
-    color: #f7f4ed;
-    color: #D7AD68;
-    color: #F6D089;
-}
-*{
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f7f4ed;
-    color: #664217;
-    width: 100%;
-    height: 100vh;
- 
-    
-}
-header {
-    background-color: #664217;
-    text-align: center;
-    color: #f7f4ed;
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-header img{
-    display: block;
-}
-header input{
-    align-content: center;
-    width: 800px;
-    height: 60px;
-    border-radius: 20px;
-    border-color: #F6D089;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    padding: 10px;
-}
-header a {
-    color: #a79377;
-    border: none;
-    border-radius: 10px;
-    color: #f7f4ed ; 
-    font-size: 37px;
-    margin: 10px;
-}
-header i:hover {
-    color: #D7AD68;
-}
-.menu {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    flex-direction: row row-reverse;
-}
-
-.busca{
-    display: flex;
-    align-content: center;
-    padding: 15px;
-    align-items: center;
-}
-.busca input{
-    margin: 0 20px;
-}
-.busca img{
-    height: 60px;
-}
-#papel{
-    margin-left: 20px;
-    border-radius: 20px 0px 0px 20px;
-}
-#name{
-    margin-right: 20px;
-    border-radius: 0px 20px 20px 0px;
-
-}
-
-
+         
 /* produtos------------ */
 .container {
     padding: 20px;
@@ -118,7 +35,6 @@ header i:hover {
     max-width: 100%; /* Imagem se ajusta ao container */
     height: auto; 
     margin-bottom: 10px; 
-    aspect-ratio: 1/1;
 }
 
 .produto h3 {

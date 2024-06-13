@@ -1,0 +1,45 @@
+
+
+.formulario_opcoes {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    margin-top: 7%;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.botoes{
+    margin-top: 10px;
+}
+.botoes button {
+    margin-top: 5px;
+    width: 49.3%;
+    display: flexbox;
+    padding: 10px;
+}
+
+input[type="button"] {
+    background-color: #D7AD68; 
+    cursor: pointer; 
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    width: 32%;
+
+}
+
+.opcao-selecionada {
+    background-color: #a2680c !important;
+
+}

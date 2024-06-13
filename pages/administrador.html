@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>administrador</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/administrador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<body>
+    <header>
+        <div class="busca">
+            <img id="papel"src="../img/logo mr paper.jpg" alt="Logo Mr.Paper">
+            <img id="name" src="../img/escrita mr paper.jpg" alt="Template Mr. Paper" onclick="window.location.href='../index.html'">
+        </div>
+        <div class="menu">
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+            <a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>      
+        </div>
+    </header>
+        <div class="container">
+            <div class="formulario_opcoes">
+                <input type="button" id="adicionar" name="opcao-edicao" value="adicionar">  
+                <input type="button" id="remover" name="opcao-edicao" value="remover">
+                <input type="button" id="atualizar" name="opcao-edicao" value="atualizar">
+                <div class="cadastrar" >
+                <form id="livro_adicionar" style="display: none;">
+                    <!-- formulario que sera adicionado as informações dos produtos -->
+                    <h1>Adicionar livro</h1>
+                    <label for="livro">livro</label>
+                    <input type="text" id="livro" name="livro" placeholder="Nome do livro">
+                    <label for="preco">Preço</label>
+                    <input type="number" id="adicionar-preco" name="adicionar-preco" placeholder="Preço do livro">
+                    <label for="estoque">Estoque</label>
+                    <input type="password" id="adicionar-estoque" name="adicionar-estoque" placeholder="Quantidade em estoque">
+                    <label for="foto-livro">Imagem</label>
+                    <input type="file" id="adicionar-foto-livro" name="adicionar-foto-livro" accept=".jpg, .jpeg, .png" placeholder="Imagem do livro">
+
+                    <div class="botoes">
+                        <a href="cadastro.html"></a><button type="button" id="adicionar-botao_cadastro" name="adicionar-botao_cadastro" style="width: 100%;" onclick="cadastrar_livro()">Cadastrar Livro</button></a>
+                    </div>
+                </form>
+            </div>
+            <div class="remover" >
+                <form id="livro_remover" style="display: none;">
+                    <h1>Remover livro</h1>
+                    <label for="livro">livro</label>
+                    <input type="text" id="remover-livro" name="remover-livro" placeholder="Nome do livro">
+                    <label for="preco">Preço</label>
+                    <input type="number" id="remover-preco" name="remover-preco" placeholder="Preço do livro">
+
+                    <div class="botoes">
+                        <button type="button" id="remover-remover" name="remover-remover" style="width: 100%;" onclick="remover_livro()">Remover livro</button>
+                    </div>
+                </form>
+            </div>
+            <div class="atualizar" >
+                <form id="livro_atualizar" style="display: none;">
+                    <h1>Atualizar livro</h1>
+                    <label for="livro">livro</label>
+                    <input type="text" id="atualizar-livro" name="atualizar-livro" placeholder="Nome do livro">
+                    <label for="preco">Preço</label>
+                    <input type="number" id="atualizar-preco" name="atualizar-preco" placeholder="Preço do livro">
+                    <label for="estoque">Estoque</label>
+                    <input type="password" id="atualizar-estoque" name="atualizar-estoque" placeholder="Quantidade em estoque">
+                    <label for="foto-livro">Imagem</label>
+                    <input type="file" id="atualizar-foto-livro" name="atualizar-foto-livro" accept=".jpg, .jpeg, .png" placeholder="Imagem do livro">
+
+                    <div class="botoes">
+                        <button type="button" id="atualizar-botao_atualizar" name="atualizar-botao_atualizar" onclick="atualizar_livro()" style="width: 100%;">Atualizar Livro</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+            
+        </div>
+
+        <script>
+            const opcaoEdicao = document.getElementsByName('opcao-edicao');
+            const formAdicionar = document.getElementById('livro_adicionar');
+            const formRemover = document.getElementById('livro_remover');
+            const formAtualizar = document.getElementById('livro_atualizar');
+            document.getElementById('adicionar').classList.add('opcao-selecionada');
+            formAdicionar.style.display = 'block';  
+
+            for (let i = 0; i < opcaoEdicao.length; i++) {
+                opcaoEdicao[i].addEventListener('click', function() {
+                    if (this.value === 'adicionar') {
+                        formAdicionar.style.display = 'block';
+                        formRemover.style.display = 'none';
+                        formAtualizar.style.display = 'none';
+                        document.getElementById('adicionar').classList.add('opcao-selecionada');
+                        document.getElementById('remover').classList.remove('opcao-selecionada');
+                        document.getElementById('atualizar').classList.remove('opcao-selecionada');
+                        
+                    
+                    } else if (this.value === 'remover') {
+                        formAdicionar.style.display = 'none';
+                        formRemover.style.display = 'block';
+                        formAtualizar.style.display = 'none';
+                        document.getElementById('adicionar').classList.remove('opcao-selecionada');
+                        document.getElementById('remover').classList.add('opcao-selecionada');
+                        document.getElementById('atualizar').classList.remove('opcao-selecionada');
+
+                    } else if (this.value === 'atualizar') {
+                        formAdicionar.style.display = 'none';
+                        formRemover.style.display = 'none';
+                        formAtualizar.style.display = 'block';
+                        document.getElementById('adicionar').classList.remove('opcao-selecionada');
+                        document.getElementById('remover').classList.remove('opcao-selecionada');
+                        document.getElementById('atualizar').classList.add('opcao-selecionada');
+
+                    }
+                });
+            }
+        </script>
+        <script src="../js/script.js"></script>
+
+</body>
+</html>

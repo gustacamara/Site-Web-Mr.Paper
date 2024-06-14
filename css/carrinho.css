@@ -7,6 +7,13 @@ body{
     height: 100vh;
 
 }
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f7f4ed;
+    border-radius: 10px ;
+}
 .container{
     padding-top: 20px;
     display: flex;

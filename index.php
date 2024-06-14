@@ -18,7 +18,10 @@ include 'config.php';
     <div class="busca">
         <img id="papel" src="img/logo mr paper.jpg" alt="Logo Mr.Paper">
         <img id="name" src="img/escrita mr paper.jpg" alt="Template Mr. Paper" onclick="window.location.href='index.php'">
-        <input type="text" placeholder="Pesquisar" name="Pesquisar">   
+        <form method="GET" action="index.php">
+            <input type="text" placeholder="Pesquisar" name="pesquisa">   
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
     <div class="menu">
         <?php if (isset($_SESSION['nome'])): ?>
@@ -33,7 +36,16 @@ include 'config.php';
 <div class="content">
     <div class="itens">
         <?php
-        $result = $conexao->query("SELECT * FROM produtos");
+        $termoPesquisa = isset($_GET['pesquisa']) ? $_GET['pesquisa'] : '';
+        $query = "SELECT * FROM produtos";
+
+        if (!empty($termoPesquisa)) {
+            $termoPesquisa = $conexao->real_escape_string($termoPesquisa);
+            $query .= " WHERE nome LIKE '%$termoPesquisa%' OR descricao LIKE '%$termoPesquisa%'";
+        }
+
+        $result = $conexao->query($query);
+
         while ($row = $result->fetch_assoc()) {
             echo '<article class="produto">';
             echo '<img src="img/produtos/' . $row["imagem"] . '" alt="' . $row["nome"] . '">';

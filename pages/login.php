@@ -23,7 +23,7 @@
     <form action="testlogin.php" method="POST">
         <h1>Login</h1>
         <label for="usuario">Usuário</label>
-        <input type="text" id="usuario" name="nome" placeholder="ex: (nome.sobrenome)">
+        <input type="text" id="usuario" name="nome" placeholder="ex: (nome)">
 
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha" placeholder="Senha">

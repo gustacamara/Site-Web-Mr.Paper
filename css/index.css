@@ -67,3 +67,17 @@ footer{
     bottom: 0;
     width: 100%;
 }
+header form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #a79377;
+}
+.busca button{
+    background-color: #a79377;
+    color: #f7f4ed;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

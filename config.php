@@ -1,6 +1,6 @@
 <?php
 
-    $dbHost = 'Localhost';
+    $dbHost = 'Localhost: 3307';
     $dbUsername = 'root';
     $dbPassword = '';
     $dbName = 'mrpapel';

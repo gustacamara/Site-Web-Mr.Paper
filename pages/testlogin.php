@@ -11,7 +11,11 @@ if(isset($_POST['logar']) && !empty($_POST['nome']) && !empty($_POST['senha']))
     $sql = "SELECT * FROM usuarios WHERE nome = '$nome' AND senha = '$senha'";
     $result = $conexao->query($sql);
 
-    if($result && $result->num_rows > 0) {
+    if($result && $result->num_rows > 0 && $nome == "admin" && $senha == "admin") {
+
+        header('Location: administrador.php');
+        exit();
+    } else if($result && $result->num_rows > 0) {
         // Se encontrou o usuário, recuperar os dados
         $usuario = $result->fetch_assoc();
         $_SESSION['nome'] = $usuario['nome'];
@@ -46,7 +50,7 @@ if(isset($_POST['logar']) && !empty($_POST['nome']) && !empty($_POST['senha']))
             <img id="name" src="../img/escrita mr paper.jpg" alt="Template Mr. Paper" onclick="window.location.href='../index.php'">
         </div>
         <div class="menu">
-            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+            <a href="login.php"><i class="fa-solid fa-user"></i></a>
             <a href="carrinho.php"><i class="fa-solid fa-cart-shopping"></i></a>      
         </div>
     </header>

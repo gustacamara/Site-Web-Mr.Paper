@@ -22,19 +22,21 @@
     flex-basis: 18%;
 }
 .produto {
-    
     border: 1px solid #ccc; /* Borda cinza claro */
     padding: 20px; /* Espaçamento interno */
     margin-bottom: 20px; 
     width: 300px; 
     text-align: center; 
     background-color: #f9f9f9; 
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .produto img {
     max-width: 100%; /* Imagem se ajusta ao container */
     height: auto; 
-    margin-bottom: 10px; 
+    margin-bottom: 0px !important;
 }
 
 .produto h3 {
@@ -54,7 +56,6 @@
     border: none; /* Sem borda */
     padding: 10px 20px; /* Espaçamento interno */
     cursor: pointer; 
-    margin-top: 10px; /* Espaçamento acima do botão */
     border-radius: 5px;
 }
 

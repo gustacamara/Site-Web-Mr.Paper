@@ -47,17 +47,22 @@ include 'config.php';
         $result = $conexao->query($query);
 
         while ($row = $result->fetch_assoc()) {
-            echo '<article class="produto">';
-            echo '<img src="img/produtos/' . $row["imagem"] . '" alt="' . $row["nome"] . '">';
-            echo '<h3>' . $row["nome"] . '</h3>';
-            echo '<p>R$ ' . number_format($row["preco"], 2, ',', '.') . '</p>';
-            echo '<form action="adicionar_carrinho.php" method="POST">';
-            echo '<input type="hidden" name="produto_id" value="' . $row["id"] . '">';
-            echo '<button type="submit">Adicionar ao carrinho</button>';
-            echo '</form>';
-            echo '</article>';
+            ?>
+            <article class="produto">
+                <div>
+                    <img src="img/produtos/<?php echo $row["imagem"]; ?>" alt="<?php echo $row["nome"]; ?>" style='margin: 0px;'>
+                    <h3><?php echo $row["nome"]; ?></h3>
+                    <p>R$ <?php echo number_format($row["preco"], 2, ',', '.'); ?></p>
+                </div>
+                <form method="POST">
+                    <input type="hidden" name="produto_id" value="<?php echo $row["id"]; ?>">
+                    <button type="submit">Adicionar ao carrinho</button>
+                </form>
+            </article>
+            <?php
         }
         ?>
+    </div>
     </div>
 </div>
 <script src="js/script.js"></script>

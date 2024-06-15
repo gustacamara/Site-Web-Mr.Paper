@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produto_id'])) {
         $stmt_insert->execute();
     }
 
-    header('Location: pages/carrinho.php');
+    header('Location: index.php');
     exit();
 } else {
     header('Location: index.php'); // Redireciona para a página inicial se não houver POST ou produto_id não definido

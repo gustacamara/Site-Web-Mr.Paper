@@ -48,13 +48,13 @@ include 'config.php';
 
         while ($row = $result->fetch_assoc()) {
             ?>
-            <article class="produto">
+            <article class="produto" style="justify-content: space-between;display: flex;flex-direction: column;">
                 <div>
-                    <img src="img/produtos/<?php echo $row["imagem"]; ?>" alt="<?php echo $row["nome"]; ?>" style='margin: 0px;'>
+                    <img src="img/produtos/<?php echo $row["imagem"]; ?>" alt="<?php echo $row["nome"]; ?>" style='margin: 0px;width: 220px;height: 312.7px;'>
                     <h3><?php echo $row["nome"]; ?></h3>
                     <p>R$ <?php echo number_format($row["preco"], 2, ',', '.'); ?></p>
                 </div>
-                <form method="POST">
+                <form method="POST" action="adicionar_carrinho.php">
                     <input type="hidden" name="produto_id" value="<?php echo $row["id"]; ?>">
                     <button type="submit">Adicionar ao carrinho</button>
                 </form>

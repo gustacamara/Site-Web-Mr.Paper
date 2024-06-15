@@ -108,11 +108,15 @@ function calcular_subtotal($carrinho) {
                     <?php endforeach; ?>
                     <div class="subtotal">
                         <p><strong>Subtotal: R$ <?php echo number_format(calcular_subtotal($carrinho), 2, ',', '.'); ?></strong></p>
-                        <a href="../index.php">Continuar comprando</a>
-                        <a href="pagamento.php?subtotal=<?php echo calcular_subtotal($carrinho); ?>">Finalizar pedido</a>
+                        <div style="display: flex; align-items: center; gap: 5px" class="finalizacao">
+                            <button style="cursor: pointer;height: 42px" onclick="window.location.href='../index.php'">Continuar comprando</button>
+                            <button style="cursor: pointer;height: 42px" onclick="window.location.href='pagamento.php?subtotal=<?php echo calcular_subtotal($carrinho); ?>'">Finalizar pedido</button>
+                        </div>
+                        </div>
+                        
                     </div>
                 <?php else: ?>
-                    <p>Nenhum produto no carrinho.</p>
+                    <p>Nenhum produto no carrinho.</p>  
                 <?php endif; ?>
             </div>
         </div>

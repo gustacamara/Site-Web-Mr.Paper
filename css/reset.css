@@ -130,3 +130,9 @@ button {
 button:hover {
     background-color: #c69649; /* Cor de fundo do botão ao passar o mouse */
 }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

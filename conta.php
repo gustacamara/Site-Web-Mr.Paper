@@ -32,8 +32,8 @@ if (isset($_POST['logout'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações da Conta</title>
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/conta.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -41,30 +41,32 @@ if (isset($_POST['logout'])) {
         <div class="busca">
             <img id="papel" src="img/logo mr paper.jpg" alt="Logo Mr.Paper">
             <img id="name" src="img/escrita mr paper.jpg" alt="Template Mr. Paper" onclick="window.location.href='index.php'">
-            <input type="text" placeholder="Pesquisar" name="Pesquisar">   
         </div>
         <div class="menu">
             <a href="conta.php"><i class="fa-solid fa-user"></i></a>
-            <a href="carrinho.php"><i class="fa-solid fa-cart-shopping"></i></a>      
+            <a href="pages/carrinho.php"><i class="fa-solid fa-cart-shopping"></i></a>      
         </div>
     </header>
+    <div class="container">
+        <div class="conteudo">
+            <h1>Informações da Conta</h1>
+            <div class="info-usuario">
+                <p><strong>Nome:</strong> <?php echo $nome . ' ' . $sobrenome; ?></p>
+                <p><strong>E-mail:</strong> <?php echo $email; ?></p>
+                <!-- Adicione mais informações conforme necessário -->
+            </div>
 
-    <div class="content">
-        <h1>Informações da Conta</h1>
-        <div class="info-usuario">
-            <p><strong>Nome:</strong> <?php echo $nome . ' ' . $sobrenome; ?></p>
-            <p><strong>E-mail:</strong> <?php echo $email; ?></p>
-            <!-- Adicione mais informações conforme necessário -->
+            <!-- Formulário para o botão de logout -->
+            <form method="post">
+                <button type="submit" name="logout" style="margin: 0px;">Encerrar Sessão</button>
+            </form>
         </div>
-
-        <!-- Formulário para o botão de logout -->
-        <form method="post">
-            <button type="submit" name="logout">Encerrar Sessão</button>
-        </form>
     </div>
+    
 
-    <footer>
-        <p>Contato: (11) 1234-5678 | email@minhaloja.com</p>
+    <footer style="position: fixed; bottom: 0; left: 0;">
+        <p style="margin: 0px; padding-top: 10px;">Contato: (11) 1234-5678 | email@minhaloja.com</p>
+    </footer>
     </footer>
 </body>
 </html>
